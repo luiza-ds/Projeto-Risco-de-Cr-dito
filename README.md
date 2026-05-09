@@ -33,7 +33,7 @@ O código executa um processo iterativo para transformar probabilidades estátic
 2.  **Sorteio Aleatório:** Uso da função `np.random.rand()` para gerar um número entre 0 e 1 para cada cliente.
 3.  **Lógica de Calote:** 
     ```python
-    calotes = (random_numbers < df['PD']).astype(int)
+    calotes = (sorteio_pd < dados['PD']).astype(int)
     ```
     *Se o número sorteado for menor que a PD, o cliente é marcado com **1** (Calote), caso contrário **0** (Pagamento).*
 4.  **Agregação:** Os prejuízos são calculados e armazenados via `.append()` para construir a distribuição de perdas.
